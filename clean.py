@@ -22,11 +22,12 @@ def clean(argv):
                         if name.endswith(suffix):
                             print (name)
                             deleted_files.append(os.path.join(root, name))
+    # operation = raw_input("Are you sure? Y/N: ") pyton2
     operation = raw_input("Are you sure? Y/N: ")
     if operation == "Y":
         print ("start delete>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
         for file_to_be_deleted in deleted_files:
-            # os.remove(file_to_be_deleted)
+            os.remove(file_to_be_deleted)
             print(file_to_be_deleted + "was deleted")
         print ("\ndelete over>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
